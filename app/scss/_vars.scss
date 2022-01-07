@@ -1,0 +1,61 @@
+$default: #000;
+$accent: #fff;
+$title: #6667ab;
+$bg: #f0f0f3;
+
+%montserrat-light {
+  font-family: "Montserrat-Light", sans-serif;
+  font-weight: 300;
+}
+
+%montserrat-regular {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%montserrat-bold {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin laptop-L {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet-L {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 630px) {
+    @content;
+  }
+}
+
+@mixin portrait-phones {
+  @media (max-width: 530px) {
+    @content;
+  }
+}
+
+@mixin mobile-L {
+  @media (max-width: 425px) {
+    @content;
+  }
+}

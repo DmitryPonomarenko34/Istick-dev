@@ -1,0 +1,29 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 15px;
+  line-height: 18,29px;
+  color: $default;
+  @extend %montserrat-light;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.site-container{
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1085px;
+}
