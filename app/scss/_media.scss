@@ -25,16 +25,6 @@
       }
     }
   }
-
-  .footer {
-    &::before {
-      top: -125px;
-    }
-
-    &::after {
-      height: 80%;
-    }
-  }
 }
 
 @media (min-width: 992px) {
