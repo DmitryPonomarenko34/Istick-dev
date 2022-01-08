@@ -30,6 +30,7 @@
     "imagemin-webp": "^6.0.0",
     "jquery": "^3.5.1",
     "rateyo": "^2.3.2",
+    "slick-carousel": "^1.8.1",
     "stylelint": "^14.2.0",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",

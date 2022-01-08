@@ -3,6 +3,8 @@
 @import 'reset';
 @import 'libs';
 @import '../../node_modules/rateyo/src/jquery.rateyo';
+@import 'node_modules/slick-carousel/slick/slick.scss';
+
 @import 'global';
 @import 'components/header';
 @import 'components/footer';
@@ -106,6 +108,73 @@
 
   &__item {
     width: 33.333%;
+  }
+}
+
+.portfolio {
+  position: relative;
+  padding: 25px 0;
+
+  &__decor--1,
+  &__decor--2 {
+    display: block;
+    position: absolute;
+    height: 320px;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  &__decor--1{
+    top: 0;
+  }
+  &__decor--2{
+    top: auto;
+    bottom: 0;
+  }
+
+  .slick-slide {}
+
+  &__slider {
+    margin: 0 -15px -20px;
+  }
+
+  &__slider-item {
+    padding: 0 15px 20px;
+  }
+
+  &__slider-link {
+    display: block;
+  }
+
+  &__slider-img {
+    border-radius: 10px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+
+    button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #dbdbdb;
+      font-size: 0;
+      line-height: 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    li+li {
+      margin-left: 5px;
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: $title;
+    }
   }
 }
 

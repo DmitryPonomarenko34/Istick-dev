@@ -76,4 +76,12 @@ $(function () {
   });
 
   $(".jq-ry-group svg").attr("stroke-width", "1").attr("stroke", "#6667AB").attr("stroke-linecap", "round");
+
+  $('.portfolio__slider').slick({
+    dots: true,
+    arrows: false,
+    slidesPerRow: 4,
+    rows: 2,
+    adaptiveHeight: true
+  });
 });
