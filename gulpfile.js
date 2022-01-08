@@ -35,8 +35,9 @@ function styles() {
     .pipe(scss({
       outputStyle: 'compressed'
     }))
-    .pipe(webpCss(['.jpg', '.jpeg', '.png', !'.svg']))
-    .pipe(concat('style.min.css'))
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true

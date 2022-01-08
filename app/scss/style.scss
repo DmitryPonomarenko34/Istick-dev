@@ -4,13 +4,16 @@
 @import 'libs';
 @import '../../node_modules/rateyo/src/jquery.rateyo';
 @import 'node_modules/slick-carousel/slick/slick.scss';
-
 @import 'global';
 @import 'components/header';
 @import 'components/footer';
 
 .first {
   padding: 58px 0 80px;
+
+  &__card {
+    width: 225px;
+  }
 
   &__inner {
     display: flex;

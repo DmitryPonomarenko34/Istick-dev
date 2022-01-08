@@ -134,7 +134,9 @@ body {
 .card {
   width: 100%;
   display: block;
-  max-width: 335px;
+  width: 23.333%;
+  margin-right: 1%;
+  margin-bottom: 20px;
   min-height: 240px;
   padding: 17px 30px;
   background-color: $bg;

@@ -101,6 +101,10 @@
       }
     }
   }
+
+  .category {
+    background: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -435,6 +439,14 @@
       padding: 15px 20px;
     }
   }
+
+  .card {
+    width: 32.333%;
+  }
+
+  .first__card {
+    width: 223px;
+  }
 }
 
 @include tablet-L {
@@ -506,6 +518,7 @@
 
   .card {
     padding: 10px 15px;
+    width: 49%;
   }
 
   .contacts {
@@ -688,6 +701,17 @@
     &__form-caption {
       max-width: none;
       margin-bottom: 15px;
+    }
+  }
+
+  .card {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .category {
+    &__inner {
+      margin-right: 0;
     }
   }
 }
