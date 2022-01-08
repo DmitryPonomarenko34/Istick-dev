@@ -184,3 +184,51 @@ body {
     max-width: 146px;
   }
 }
+
+.stars {
+  margin-left: -5px;
+}
+
+.review {
+  padding: 12px 14px;
+  border-radius: 12px;
+  min-height: 320px;
+  max-width: 335px;
+  box-shadow: $box-shadow;
+  background-color: $bg;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 21px;
+  }
+
+  &__info-box {}
+
+  &__avatar {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right: 25px;
+  }
+
+  &__avatar-img {
+    object-fit: cover;
+  }
+
+  &__name {
+    font-size: 17px;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__date {
+    margin-bottom: 10px;
+    font-size: 10px;
+    display: block;
+  }
+
+  &__text {}
+}
