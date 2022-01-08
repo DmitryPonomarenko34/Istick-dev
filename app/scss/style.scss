@@ -125,10 +125,11 @@
     object-fit: cover;
   }
 
-  &__decor--1{
+  &__decor--1 {
     top: 0;
   }
-  &__decor--2{
+
+  &__decor--2 {
     top: auto;
     bottom: 0;
   }
@@ -175,6 +176,26 @@
     button {
       background-color: $title;
     }
+  }
+}
+
+.news {
+  padding: 20px 0;
+
+  &__item {
+    width: 33.333%;
+    margin-right: 1%;
+    margin-bottom: 20px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 

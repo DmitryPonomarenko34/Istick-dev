@@ -84,4 +84,5 @@ $(function () {
     rows: 2,
     adaptiveHeight: true
   });
+
 });

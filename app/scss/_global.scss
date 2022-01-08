@@ -142,19 +142,32 @@ body {
   border-radius: 12px;
 
   &__img {
-    max-width: 221px;
-    height: 182px;
     margin: 0 auto;
   }
 
   &__title {
     display: block;
     font-size: 17px;
+    margin-bottom: 10px;
   }
 
   &__price {
     display: block;
     text-align: end;
+  }
+
+  &--news {
+    &__title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__time {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 10px;
+      text-align: end;
+    }
   }
 }
 
