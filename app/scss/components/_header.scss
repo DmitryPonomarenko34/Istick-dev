@@ -47,7 +47,8 @@
     align-items: center;
   }
 
-  &__info-lang {
+  &__info-lang,
+  &__info-personal {
     position: relative;
     display: flex;
     padding-right: 22px;
@@ -57,19 +58,25 @@
       content: '';
       position: absolute;
       right: 0;
-      top: 8px;
+      top: 6px;
       width: 12px;
-      height: 6px;
+      height: 7px;
       background-image: url('../images/icons/mono/spriteMono.svg#angle-down');
-
+      transition: ease 0.3s transform;
       @extend %bg;
     }
 
     &:hover {
+      &::after {
+        transform: rotate(-180deg);
+        transition: ease 0.3s transform;
+      }
 
       .header__info-menu {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0);
+        transition: ease 0.3s opacity, ease 0.3s visibility, ease 0.3s transform;
       }
     }
   }
@@ -82,6 +89,9 @@
     opacity: 0;
     visibility: hidden;
     z-index: 5;
+    border-radius: 10px;
+    transform: translateY(3px);
+    transition: ease 0.3s opacity, ease 0.3s visibility, ease 0.3s transform;
   }
 
   &__info-menu__item {}
@@ -96,33 +106,6 @@
 
   &__info-lang__img {
     margin-right: 10px;
-  }
-
-  &__info-personal {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-right: 22px;
-    cursor: default;
-
-    &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 8px;
-      width: 12px;
-      height: 6px;
-      background-image: url('../images/icons/mono/spriteMono.svg#angle-down');
-
-      @extend %bg;
-    }
-
-    &:hover {
-      .header__info-menu {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
   }
 
   &__info-personal__icon {
@@ -148,6 +131,12 @@
       width: 100%;
       height: 6px;
       box-shadow: inset -1px -1px 2px #FAFBFF, inset 1px 1px 2px #A6ABBD;
+    }
+
+    .error {
+      display: block;
+      font-size: 17px;
+      color: red;
     }
   }
 
@@ -348,7 +337,12 @@
       margin-right: 45px;
     }
 
-    &:hover {}
+    &:hover {
+      &::after {
+        transform: rotate(-180deg);
+        transition: ease transform 0.3s;
+      }
+    }
   }
 
   &__list-item-text {}
@@ -391,9 +385,9 @@
     &::after {
       content: '';
       position: absolute;
-      right: 0;
+      right: 1px;
       top: 50%;
-      width: 12px;
+      width: 13px;
       height: 6px;
       transform: translateY(-50%) rotate(-90deg);
       background-image: url('../images/icons/mono/angle-down.svg');
@@ -442,7 +436,7 @@
 
   &__list-link {
     display: block;
-    color: inherit;
+    color: $default;
   }
 
   &__list-box {
@@ -453,8 +447,11 @@
   }
 
   &__list-img {
+    transition: ease 0.3s transform;
+
     &:hover {
       transform: scale(1.1);
+      transition: ease 0.3s transform;
     }
   }
 
@@ -469,11 +466,11 @@
     content: "";
     position: absolute;
     right: 0;
-    top: 8px;
+    top: 5px;
     width: 12px;
-    height: 6px;
+    height: 7px;
     background-image: url('../images/icons/mono/angle-down.svg');
-
+    transition: ease transform 0.3s;
     @extend %bg;
   }
 

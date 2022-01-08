@@ -87,15 +87,15 @@
         <img class="logo__img" src="images/logo.svg" alt="logo">
       </a>
       <div class="header__action-box">
-        <form class="header__action-form" action="#">
+        <form class="header__action-form" action="#" >
           <button class="header__action-btn" type="submit">
             <svg class="header__action-icon">
               <use xlink:href="images/icons/mono/spriteMono.svg#search"></use>
             </svg>
           </button>
-          <input class="header__action-search accent-input" type="search" placeholder="search">
+          <input class="header__action-search accent-input" type="search" name="search" placeholder="search" required>
         </form>
-        <a class="header__action-link accent-link" href="#">
+        <a class="header__action-link accent-link" data-fancybox href="#product-popup">
           Quick order
         </a>
       </div>

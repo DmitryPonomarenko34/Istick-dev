@@ -66,14 +66,16 @@
 
   &__control {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 30px;
   }
 
   &__control-tab {
     font-size: 17px;
+    margin-bottom: 15px;
 
-    +.popular__control-tab {
-      margin-left: 37px;
+    &:not(:last-child) {
+      margin-right: 37px;
     }
 
     &--active {
@@ -88,12 +90,17 @@
   }
 
   &__content-item {
+    display: none;
     width: 23%;
     margin-right: 1%;
     margin-bottom: 20px;
 
     &:nth-child(4n) {
       margin-right: 0;
+    }
+
+    &--active {
+      display: block;
     }
   }
 }
@@ -104,10 +111,17 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__item {
     width: 33.333%;
+    margin-right: 1%;
+    margin-bottom: 20px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -201,6 +215,11 @@
 
 .contacts {
   padding: 20px 0;
+
+  .error {
+    font-size: 17px;
+    color: red;
+  }
 
   &__inner {
     display: flex;

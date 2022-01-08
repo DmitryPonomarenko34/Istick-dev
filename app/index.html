@@ -100,15 +100,15 @@
         <img class="logo__img" src="images/logo.svg" alt="logo">
       </a>
       <div class="header__action-box">
-        <form class="header__action-form" action="#">
+        <form class="header__action-form" action="#" >
           <button class="header__action-btn" type="submit">
             <svg class="header__action-icon">
               <use xlink:href="images/icons/mono/spriteMono.svg#search"></use>
             </svg>
           </button>
-          <input class="header__action-search accent-input" type="search" placeholder="search">
+          <input class="header__action-search accent-input" type="search" name="search" placeholder="search" required>
         </form>
-        <a class="header__action-link accent-link" href="#">
+        <a class="header__action-link accent-link" data-fancybox href="#product-popup">
           Quick order
         </a>
       </div>
@@ -726,8 +726,8 @@
               </a>
               <a class="card" href="#">
                 <picture>
-                  <source srcset="images/content/catalog/01.webp" type="image/webp">
-                  <img class="card__img" src="images/content/catalog/01.png" alt="">
+                  <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                  <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
                 </picture>
                 <span class="card__title">
                   Photo prints
@@ -738,8 +738,8 @@
               </a>
             </div>
             <picture>
-              <source srcset="images/content/first/01.webp" type="image/webp">
-              <img class="first__img" src="images/content/first/01.png" alt="">
+              <source srcset="images/content/first/01.webp" type="image/webp" loading="lazy">
+              <img class="first__img" src="images/content/first/01.png" alt="" loading="lazy">
             </picture>
           </div>
         </div>
@@ -788,36 +788,36 @@
             Popular product
           </h3>
           <div class="popular__control">
-            <a class="popular__control-tab popular__control-tab--active" href="#">
+            <a class="popular__control-tab popular__control-tab--active" href="#" data-tabs="photos">
               Photos
             </a>
-            <a class="popular__control-tab" href="#">
+            <a class="popular__control-tab" href="#" data-tabs="books">
               Photo books
             </a>
-            <a class="popular__control-tab" href="#">
+            <a class="popular__control-tab" href="#" data-tabs="prints">
               Wall prints
             </a>
-            <a class="popular__control-tab" href="#">
+            <a class="popular__control-tab" href="#" data-tabs="calendars">
               Calendars
             </a>
-            <a class="popular__control-tab" href="#">
+            <a class="popular__control-tab" href="#" data-tabs="gifts">
               Photo gifts
             </a>
-            <a class="popular__control-tab" href="#">
+            <a class="popular__control-tab" href="#" data-tabs="promo">
               Promo prints
             </a>
-            <a class="popular__control-tab" href="#">
+            <a class="popular__control-tab" href="#" data-tabs="signs">
               Signs
             </a>
-            <a class="popular__control-tab" href="#">
+            <a class="popular__control-tab" href="#" data-tabs="services">
               Services
             </a>
           </div>
           <div class="popular__content">
-            <a class="popular__content-item card" href="#">
+            <a class="popular__content-item card" href="#" data-tabs="photos">
               <picture>
-                <source srcset="images/content/catalog/01.webp" type="image/webp">
-                <img class="card__img" src="images/content/catalog/01.png" alt="">
+                <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
               </picture>
               <span class="card__title">
                 Photo prints
@@ -826,10 +826,10 @@
                 from 18,00 ₪
               </span>
             </a>
-            <a class="popular__content-item card" href="#">
+            <a class="popular__content-item card" href="#" data-tabs="photos">
               <picture>
-                <source srcset="images/content/catalog/02.webp" type="image/webp">
-                <img class="card__img" src="images/content/catalog/02.png" alt="">
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
               </picture>
               <span class="card__title">
                 Photo prints
@@ -838,10 +838,10 @@
                 from 18,00 ₪
               </span>
             </a>
-            <a class="popular__content-item card" href="#">
+            <a class="popular__content-item card" href="#" data-tabs="photos">
               <picture>
-                <source srcset="images/content/catalog/03.webp" type="image/webp">
-                <img class="card__img" src="images/content/catalog/03.png" alt="">
+                <source srcset="images/content/catalog/03.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/03.png" alt="" loading="lazy">
               </picture>
               <span class="card__title">
                 Photo prints
@@ -850,10 +850,322 @@
                 from 18,00 ₪
               </span>
             </a>
-            <a class="popular__content-item card" href="#">
+            <a class="popular__content-item card" href="#" data-tabs="photos">
               <picture>
-                <source srcset="images/content/catalog/04.webp" type="image/webp">
-                <img class="card__img" src="images/content/catalog/04.png" alt="">
+                <source srcset="images/content/catalog/04.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/04.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="books">
+              <picture>
+                <source srcset="images/content/catalog/03.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/03.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="books">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="books">
+              <picture>
+                <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="books">
+              <picture>
+                <source srcset="images/content/catalog/04.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/04.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="prints">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="prints">
+              <picture>
+                <source srcset="images/content/catalog/03.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/03.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="prints">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="prints">
+              <picture>
+                <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="prints">
+              <picture>
+                <source srcset="images/content/catalog/04.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/04.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="calendars">
+              <picture>
+                <source srcset="images/content/catalog/03.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/03.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="calendars">
+              <picture>
+                <source srcset="images/content/catalog/04.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/04.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="calendars">
+              <picture>
+                <source srcset="images/content/catalog/03.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/03.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="calendars">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="calendars">
+              <picture>
+                <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="gifts">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="gifts">
+              <picture>
+                <source srcset="images/content/catalog/03.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/03.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="promo">
+              <picture>
+                <source srcset="images/content/catalog/03.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/03.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="promo">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="promo">
+              <picture>
+                <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="signs">
+              <picture>
+                <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="signs">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="services">
+              <picture>
+                <source srcset="images/content/catalog/03.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/03.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="services">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="services">
+              <picture>
+                <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="services">
+              <picture>
+                <source srcset="images/content/catalog/04.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/04.png" alt="" loading="lazy">
+              </picture>
+              <span class="card__title">
+                Photo prints
+              </span>
+              <span class="card__price">
+                from 18,00 ₪
+              </span>
+            </a>
+            <a class="popular__content-item card" href="#" data-tabs="services">
+              <picture>
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
               </picture>
               <span class="card__title">
                 Photo prints
@@ -875,8 +1187,8 @@
               <div class="review__info">
                 <a class="review__avatar" href="#">
                   <picture>
-                    <source srcset="images/content/feedback/01.webp" type="image/webp">
-                    <img class="review__avatar-img" src="images/content/feedback/01.png" alt="">
+                    <source srcset="images/content/feedback/01.webp" type="image/webp" loading="lazy">
+                    <img class="review__avatar-img" src="images/content/feedback/01.png" alt="" loading="lazy">
                   </picture>
                 </a>
                 <div class="review__info-box">
@@ -898,8 +1210,8 @@
               <div class="review__info">
                 <a class="review__avatar" href="#">
                   <picture>
-                    <source srcset="images/content/feedback/02.webp" type="image/webp">
-                    <img class="review__avatar-img" src="images/content/feedback/02.png" alt="">
+                    <source srcset="images/content/feedback/02.webp" type="image/webp" loading="lazy">
+                    <img class="review__avatar-img" src="images/content/feedback/02.png" alt="" loading="lazy">
                   </picture>
                 </a>
                 <div class="review__info-box">
@@ -924,8 +1236,8 @@
               <div class="review__info">
                 <a class="review__avatar" href="#">
                   <picture>
-                    <source srcset="images/content/feedback/03.webp" type="image/webp">
-                    <img class="review__avatar-img" src="images/content/feedback/03.png" alt="">
+                    <source srcset="images/content/feedback/03.webp" type="image/webp" loading="lazy">
+                    <img class="review__avatar-img" src="images/content/feedback/03.png" alt="" loading="lazy">
                   </picture>
                 </a>
                 <div class="review__info-box">
@@ -947,8 +1259,10 @@
         </div>
       </section>
       <section class="portfolio">
-        <img class="portfolio__decor--1" src="images/icons/multi/spriteMulti.svg#decor-portfolio-1" alt="">
-        <img class="portfolio__decor--2" src="images/icons/multi/spriteMulti.svg#decor-portfolio-2" alt="">
+        <img class="portfolio__decor--1" src="images/icons/multi/spriteMulti.svg#decor-portfolio-1" alt=""
+          loading="lazy">
+        <img class="portfolio__decor--2" src="images/icons/multi/spriteMulti.svg#decor-portfolio-2" alt=""
+          loading="lazy">
         <div class="container">
           <h3 class="title">
             Our work
@@ -1064,8 +1378,8 @@
                 Photo prints
               </span>
               <picture>
-                <source srcset="images/content/catalog/01.webp" type="image/webp">
-                <img class="card__img" src="images/content/catalog/01.png" alt="">
+                <source srcset="images/content/catalog/01.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/01.png" alt="" loading="lazy">
               </picture>
               <time class="card--news__time" datetime="2019-07-08">
                 08/07/2019
@@ -1079,8 +1393,8 @@
                 Photo prints
               </span>
               <picture>
-                <source srcset="images/content/catalog/02.webp" type="image/webp">
-                <img class="card__img" src="images/content/catalog/02.png" alt="">
+                <source srcset="images/content/catalog/02.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/catalog/02.png" alt="" loading="lazy">
               </picture>
               <time class="card--news__time" datetime="2019-07-08">
                 08/07/2019
@@ -1094,8 +1408,8 @@
                 Photo prints
               </span>
               <picture>
-                <source srcset="images/content/news/1.webp" type="image/webp">
-                <img class="card__img" src="images/content/news/1.png" alt="">
+                <source srcset="images/content/news/1.webp" type="image/webp" loading="lazy">
+                <img class="card__img" src="images/content/news/1.png" alt="" loading="lazy">
               </picture>
               <time class="card--news__time" datetime="2019-07-08">
                 08/07/2019
@@ -1164,21 +1478,21 @@
               <form class="contacts__form" action="#">
                 <label class="contacts__form-label">
                   <span class="contacts__form-text">Your name</span>
-                  <input class="contacts__form-input accent-input" type="text" placeholder="John Smith">
+                  <input class="contacts__form-input accent-input" type="text" placeholder="John Smith" name="name" required>
                 </label>
                 <div class="contacts__form-items">
                   <label class="contacts__form-label">
                     <span class="contacts__form-text">Phone number</span>
-                    <input class="contacts__form-input accent-input" type="tel" placeholder="+9 (999) 999 9999">
+                    <input class="contacts__form-input contacts__form-input--phone accent-input" type="tel" placeholder="+9 (999) 999 9999" name="phone" required>
                   </label>
                   <label class="contacts__form-label">
                     <span class="contacts__form-text">Email</span>
-                    <input class="contacts__form-input accent-input" type="email" placeholder="j.smith@email.com">
+                    <input class="contacts__form-input accent-input" name="email" type="email" placeholder="j.smith@email.com" required>
                   </label>
                 </div>
                 <label class="contacts__form-label">
                   <span class="contacts__form-text">Your message</span>
-                  <textarea class="contacts__form-textarea accent-input" placeholder="Message..."></textarea>
+                  <textarea class="contacts__form-textarea accent-input" placeholder="Message..."></textarea name="messagee" required>
                 </label>
                 <div class="contacts__form-elements">
                   <p class="contacts__form-caption">
@@ -1299,7 +1613,7 @@
             <p class="footer__form-text">
               Subscribe to our news
             </p>
-            <input class="footer__form-input accent-input" type="email" placeholder="Your email">
+            <input class="footer__form-input accent-input" type="email" name="email" placeholder="Your email" required>
           </label>
           <button class="footer__form-btn accent-link" type="submit">
             Subscribe
@@ -1333,6 +1647,38 @@
 </footer>
   </div>
 
+  <div class="quick-form__box" id="product-popup">
+    <form class="quick-form" action="#">
+      <h4 class="title">
+        Quick Order Form
+      </h4>
+      <div class="quick-form__content">
+        <div class="quick-form__items">
+          <label class="quick-form__label">
+            <span class="quick-form__text">Full Name</span>
+            <input class="quick-form__input accent-input" type="tel" name="tel" placeholder="Vasily Vasiliev" required>
+          </label>
+          <label class="quick-form__label">
+            <span class="quick-form__text">Phone number</span>
+            <input class="quick-form__input quick-form__input--phone accent-input" type="tel" name="phone" placeholder="+9 (999) 999 9999" required>
+          </label>
+          <label class="quick-form__label">
+            <span class="quick-form__text">Email</span>
+            <input class="quick-form__input accent-input" type="email" name="email" placeholder="j.smith@email.com" required>
+          </label>
+        </div>
+        <input class="quick-form__file" type="file"
+          accept=".jpg, .jpeg, .png,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+      </div>
+      <textarea class="quick-form__textarea accent-input" name="message" required></textarea>
+      <button class="quick-form__btn accent-link" type="submit">
+        Place Order
+      </button>
+      <p class="quick-form__copy">
+        By clicking "Place Order" I agree to the processing of my personal data in accordance with the
+      </p>
+    </form>
+  </div>
   <script src="js/main.min.js"></script>
 </body>
 

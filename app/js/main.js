@@ -6,13 +6,18 @@ $(function () {
   let mobileMenu = $('.mobile-menu');
   let headerFixedBlock = $('.header__action');
   let userLink = $('.header__info-personal');
-  let headerScrollTop = header.outerHeight();
   let headerContainer = $('.header__container');
+  let headerScrollTop = header.outerHeight();
   let firstBlockPadding = $('main section:first').css('padding-top');
   let paddingTop = headerScrollTop + parseInt(firstBlockPadding.match(/\d+/));
 
+  console.log(firstBlockPadding);
+  console.log(headerScrollTop);
+
   if ($(window).width() <= 1200) {
     $('.header__info-link--marker').removeClass('header__info-link').prependTo('.header__action-items');
+    headerScrollTop = header.outerHeight();
+    paddingTop = headerScrollTop + parseInt(firstBlockPadding.match(/\d+/));
   }
 
   if ($(window).width() > 992) {
@@ -39,11 +44,9 @@ $(function () {
     menuNavbar.prependTo(headerFixedBlock);
     navbarSubmenu.appendTo(mobileMenu);
 
-    headerScrollTop = header.innerHeight();
+    headerScrollTop = header.outerHeight();
     paddingTop = headerScrollTop + parseInt(firstBlockPadding.match(/\d+/));
     $('main section:first').css('padding-top', paddingTop);
-
-    console.log(headerScrollTop);
 
     $('.submenu__item-text').on('click', function () {
       $(this).next().slideToggle();
@@ -85,4 +88,25 @@ $(function () {
     adaptiveHeight: true
   });
 
+  $('.popular__control-tab').on('click', function (e) {
+    e.preventDefault();
+    var id = $(this).attr('data-tabs'),
+      content = $('.popular__content-item[data-tabs="' + id + '"]');
+
+    $('.popular__control-tab').removeClass('popular__control-tab--active');
+    $(this).addClass('popular__control-tab--active');
+
+    $('.popular__content-item').removeClass('popular__content-item--active');
+    content.addClass('popular__content-item--active');
+  });
+
+  $('.popular__control-tab:first').click();
+
+  $('.header__action-form').validate();
+  $('.quick-form').validate();
+  $('.contacts__form').validate();
+  $('.footer__form').validate();
+  $('.contacts__form-input--phone').inputmask({
+    "mask": "+9 (999) 999 9999"
+  });
 });
