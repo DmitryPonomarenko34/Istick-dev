@@ -1,0 +1,483 @@
+.header {
+  padding: 13px 0;
+  z-index: 10;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-items {
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+  &__info-item {
+    +.header__info-item {
+      margin-left: 30px;
+    }
+  }
+
+  &__info-link {
+    color: inherit;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__info-link--marker {
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 15px;
+      height: 18px;
+      background-image: url('../images/icons/mono/spriteMono.svg#nav-marker');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__info-user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info-lang {
+    position: relative;
+    display: flex;
+    padding-right: 22px;
+    cursor: default;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 8px;
+      width: 12px;
+      height: 6px;
+      background-image: url('../images/icons/mono/spriteMono.svg#angle-down');
+
+      @extend %bg;
+    }
+
+    &:hover {
+
+      .header__info-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__info-menu {
+    position: absolute;
+    padding-top: 10px;
+    top: 100%;
+    width: 122px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+  }
+
+  &__info-menu__item {}
+
+  &__info-menu__link {
+    display: inline-flex;
+    padding: 5px 10px;
+    width: 100%;
+    background-color: #fff;
+    color: inherit;
+  }
+
+  &__info-lang__img {
+    margin-right: 10px;
+  }
+
+  &__info-personal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 22px;
+    cursor: default;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 8px;
+      width: 12px;
+      height: 6px;
+      background-image: url('../images/icons/mono/spriteMono.svg#angle-down');
+
+      @extend %bg;
+    }
+
+    &:hover {
+      .header__info-menu {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__info-personal__icon {
+    margin-right: 10px;
+    width: 15px;
+    height: 20px;
+    fill: #000;
+  }
+
+  &__action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 28px 0 35px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
+      width: 100%;
+      height: 6px;
+      box-shadow: inset -1px -1px 2px #FAFBFF, inset 1px 1px 2px #A6ABBD;
+    }
+  }
+
+  &__action-mess {
+    display: none;
+  }
+
+  &__action-box {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+  }
+
+  &__action-logo {
+    display: inline-block;
+    margin-right: 72px;
+  }
+
+  &__action-form {
+    position: relative;
+    display: flex;
+    margin-right: 70px;
+  }
+
+  &__action-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 41px;
+    width: 43px;
+    z-index: 2;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__action-icon {
+    width: 15px;
+    height: 15px;
+    color: currentColor;
+  }
+
+  &__action-items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__action-phone {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    padding-left: 28px;
+    margin-right: 30px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 15px;
+      height: 15px;
+      background-image: url('../images/icons/mono/spriteMono.svg#phone');
+      @extend %bg;
+    }
+  }
+
+  &__action-basket {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #fff;
+  }
+
+  &--fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: -10px -10px 30px #fff, 10px 10px 30px rgba(174, 174, 192, 0.4);
+    background-color: $bg;
+
+    .burger {
+      display: flex;
+    }
+
+    .mobile-menu {
+      display: block;
+
+      &--active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .menu {
+      &__list-item {
+        display: none;
+      }
+
+      &__list-item-text {
+        display: none;
+      }
+    }
+
+    .submenu {
+      position: static;
+
+      &__item {
+        background-color: #31353a;
+        color: #fff;
+      }
+
+      &__item-text {
+        position: relative;
+        display: block;
+        width: 100%;
+
+        &::after {
+          width: 17px;
+          height: 17px;
+          transform: translateY(-50%) rotate(0);
+          background-image: url('../images/icons/multi/spriteMulti.svg#angle-right');
+        }
+      }
+    }
+
+    .sub-sub-menu {
+      width: 500px;
+
+      &__list {
+        display: block;
+        column-count: 3;
+      }
+
+      &__list-item {
+        width: auto;
+      }
+
+      &__list-box {
+        display: none;
+      }
+
+      &__caption {
+        color: $default;
+        @extend %montserrat-bold;
+      }
+
+      &__list-text {
+        color: $default;
+      }
+    }
+
+    .dropdown-item {
+      display: block;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .header {
+      &__info {
+        display: none;
+      }
+
+      &__action {
+        padding: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &__action-items {
+        display: none;
+      }
+    }
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    cursor: default;
+
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+
+    &:hover {}
+  }
+
+  &__list-item-text {}
+
+  &__list-submenu {}
+
+  &__list-link {
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+.submenu {
+  position: absolute;
+  top: 103%;
+  border-radius: 10px;
+  min-width: 250px;
+  box-shadow: 0 10px 30px rgba(174, 174, 192, 0.4);
+
+  &__item {
+    padding: 10px 15px;
+    background-color: $bg;
+
+    &:first-child {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+
+  &__item-text {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 12px;
+      height: 6px;
+      transform: translateY(-50%) rotate(-90deg);
+      background-image: url('../images/icons/mono/angle-down.svg');
+      @extend %bg;
+    }
+  }
+}
+
+.sub-sub-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  padding: 20px 10px;
+  width: 60vw;
+  height: 50vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(174, 174, 192, 0.4);
+  background-color: $bg;
+  opacity: 0;
+  border-radius: 10px;
+  visibility: hidden;
+
+  &__caption {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: $title;
+
+    @extend %montserrat-regular;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__list-item {
+    width: 19%;
+    text-align: center;
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-right: 1%;
+    }
+  }
+
+  &__list-link {
+    display: block;
+    color: inherit;
+  }
+
+  &__list-box {
+    overflow: hidden;
+    border: 1px solid $default;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__list-img {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__list-text {}
+}
+
+.dropdown-item {
+  position: relative;
+  padding-right: 22px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 12px;
+    height: 6px;
+    background-image: url('../images/icons/mono/angle-down.svg');
+
+    @extend %bg;
+  }
+
+  >.submenu {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

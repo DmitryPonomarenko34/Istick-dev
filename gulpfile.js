@@ -47,6 +47,7 @@ function styles() {
 
 function scripts() {
   return src([
+      'node_modules/jquery/dist/jquery.js',
       'node_modules/svgxuse/svgxuse.js',
       'app/js/main.js'
     ])

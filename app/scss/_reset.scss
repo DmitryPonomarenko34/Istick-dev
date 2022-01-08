@@ -8,7 +8,7 @@ html {
   box-sizing: inherit;
 }
 
-ul[class],
+ul,
 ol[class] {
   padding: 0;
   margin: 0;
@@ -49,6 +49,7 @@ select {
   font: inherit;
 }
 
-a[class] {
+a {
   text-decoration: none;
+  color: inherit;
 }
