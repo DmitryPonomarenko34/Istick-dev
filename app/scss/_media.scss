@@ -428,11 +428,23 @@
       }
     }
   }
+
+  .quick-form {
+    &__box {
+      width: 80vw;
+      padding: 15px 20px;
+    }
+  }
 }
 
 @include tablet-L {
   .footer {
     background-color: #e6e6e6;
+    padding: 20px 0;
+
+    &__decor {
+      display: none;
+    }
 
     &::before,
     &::after {
@@ -474,6 +486,53 @@
   .info-block {
     &__item {
       width: 33.333%;
+    }
+  }
+
+  .news {
+    &__item {
+      margin-right: 1%;
+      width: 49%;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 1%;
+      }
+    }
+  }
+
+  .card {
+    padding: 10px 15px;
+  }
+
+  .contacts {
+    &__inner {
+      display: block;
+    }
+
+    &__info {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    &__info,
+    &__box {
+      width: 100%;
+    }
+  }
+
+  .quick-form {
+    &__content {}
+
+    &__items {
+      width: 100%;
+    }
+
+    &__file {
+      width: 221px;
     }
   }
 }
@@ -602,6 +661,41 @@
   .review {
     &__avatar {
       margin-right: 10px;
+    }
+  }
+
+  .news {
+    &__item {
+      margin-right: 0;
+      width: 100%;
+      max-width: none;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .contacts {
+    &__form-items {
+      display: block;
+    }
+
+    &__form-elements {
+      display: block;
+    }
+
+    &__form-caption {
+      max-width: none;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@include mobile-L {
+  .portfolio {
+    &__slider-img {
+      width: 100%;
     }
   }
 }

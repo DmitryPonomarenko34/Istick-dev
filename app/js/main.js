@@ -85,7 +85,31 @@ $(function () {
     arrows: false,
     slidesPerRow: 4,
     rows: 2,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+
+    responsive: [
+      {
+      breakpoint: 769,
+      settings: {
+        slidesPerRow: 3,
+        rows: 2,
+      }
+    }, 
+    {
+      breakpoint: 531,
+      settings: {
+        slidesPerRow: 2,
+        rows: 2,
+      }
+    },
+    {
+      breakpoint: 426,
+      settings: {
+        slidesPerRow: 1,
+        rows: 1,
+      }
+    },
+  ]
   });
 
   $('.popular__control-tab').on('click', function (e) {
