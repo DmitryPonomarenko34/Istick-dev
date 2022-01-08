@@ -6,4 +6,58 @@
 @import 'components/header';
 @import 'components/footer';
 
+.first {
+  padding: 58px 0 80px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    flex-shrink: 1;
+    margin-right: 4%;
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__list {
+    margin-bottom: 23px;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      background: $title;
+      box-shadow: $box-shadow;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__link {
+    margin-bottom: 69px;
+  }
+
+  &__img {
+    flex-shrink: 1;
+    align-self: flex-end;
+  }
+}
+
+
 @import 'media';

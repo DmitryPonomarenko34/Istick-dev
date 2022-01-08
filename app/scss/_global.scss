@@ -33,6 +33,15 @@ body {
   overflow-y: hidden;
 }
 
+.title {
+  font-size: 25px;
+  color: $title;
+  margin-bottom: 25px;
+  line-height: 30px;
+  @extend %montserrat-bold;
+}
+
+
 .burger {
   position: relative;
   display: none;
@@ -117,7 +126,61 @@ body {
   border: 1px solid $title;
   border-radius: 12px;
   padding: 11px 31px;
-  box-shadow: -10px -10px 30px #fff, 10px 10px 30px rgba(174, 174, 192, 0.4);
+  box-shadow: $box-shadow;
   color: inherit;
   cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  display: block;
+  max-width: 335px;
+  min-height: 240px;
+  padding: 17px 30px;
+  background-color: $bg;
+  box-shadow: $box-shadow;
+  border-radius: 12px;
+
+  &__img {
+    max-width: 221px;
+    height: 182px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    display: block;
+    font-size: 17px;
+  }
+
+  &__price {
+    display: block;
+    text-align: end;
+  }
+}
+
+.info-block {
+  padding: 20px 0 40px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 20px;
+  }
+
+  &__item-icon {
+    width: 90px;
+    height: 70px;
+    margin-right: 10px;
+  }
+
+  &__item-text {
+    max-width: 146px;
+  }
 }
