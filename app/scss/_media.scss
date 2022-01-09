@@ -102,7 +102,7 @@
     }
   }
 
-  .category {
+  .section--decor {
     background: none;
   }
 }
@@ -447,6 +447,12 @@
   .first__card {
     width: 223px;
   }
+
+  .mugs {
+    &__info {
+      max-width: 50%;
+    }
+  }
 }
 
 @include tablet-L {
@@ -546,6 +552,36 @@
 
     &__file {
       width: 221px;
+    }
+  }
+
+  .mugs {
+    padding: 30px 0;
+
+    &__info {
+      max-width: 100%;
+    }
+
+    &__inner {
+      display: block;
+    }
+  }
+
+  .slider-syncing {
+    &__for-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    &__nav-item {
+      padding: 0;
+    }
+
+    &__nav-img {
+      height: 100px;
+      object-fit: cover;
+      margin: 0 auto;
     }
   }
 }
@@ -709,9 +745,14 @@
     width: 100%;
   }
 
-  .category {
-    &__inner {
-      margin-right: 0;
+  .category__inner,
+  .mugs__catalog-inner {
+    margin-right: 0;
+  }
+
+  .slider-syncing {
+    &__nav-img {
+      height: 90px;
     }
   }
 }

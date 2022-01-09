@@ -1,0 +1,140 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'node_modules/slick-carousel/slick/slick.scss';
+@import 'global';
+@import 'components/header';
+@import 'components/footer';
+
+.mugs {
+  padding: 75px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__slider {
+    margin-right: 25px;
+    min-width: 0;
+  }
+
+  &__info {
+    flex-shrink: 1;
+    max-width: 515px;
+  }
+
+  &__info-text {
+    margin-bottom: 28px;
+  }
+
+  &__info-links {}
+
+  &__info-link {
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__catalog {
+    padding-top: 50px;
+  }
+
+  &__catalog-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1%;
+  }
+}
+
+.slider-syncing {
+
+  &__for {
+    margin-bottom: 20px;
+
+    .slick-arrow {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 45px;
+      width: 45px;
+      border-radius: 5px;
+      background-color: $title;
+      z-index: 2;
+      cursor: pointer;
+      border: none;
+      padding: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: ease 0.3s opacity, ease 0.3s visibility, ease 0.3s background-color;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    .slick-prev {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .slick-next {
+      right: 15px;
+      left: auto;
+    }
+
+    &:hover {
+      .slick-arrow {
+        opacity: 1;
+        visibility: visible;
+        transition: ease 0.3s opacity, ease 0.3s visibility;
+
+        &:hover {
+          background-color: #31353a;
+          transition: ease 0.3s background-color;
+        }
+      }
+
+      .slick-disabled {
+        opacity: 0.3;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__for-item {}
+
+  &__for-img {}
+
+  &__nav {
+    margin: 0 -10px;
+
+    .slick-current {
+      .slider-syncing {
+        &__nav-img {
+          border: 2px solid $title;
+        }
+      }
+    }
+  }
+
+  &__nav-item {
+    padding: 0 10px;
+    cursor: pointer;
+  }
+
+  &__nav-img {
+    border: 2px solid transparent;
+  }
+}
+
+@import 'media';

@@ -87,29 +87,28 @@ $(function () {
     rows: 2,
     adaptiveHeight: true,
 
-    responsive: [
+    responsive: [{
+        breakpoint: 769,
+        settings: {
+          slidesPerRow: 3,
+          rows: 2,
+        }
+      },
       {
-      breakpoint: 769,
-      settings: {
-        slidesPerRow: 3,
-        rows: 2,
-      }
-    }, 
-    {
-      breakpoint: 531,
-      settings: {
-        slidesPerRow: 2,
-        rows: 2,
-      }
-    },
-    {
-      breakpoint: 426,
-      settings: {
-        slidesPerRow: 1,
-        rows: 1,
-      }
-    },
-  ]
+        breakpoint: 531,
+        settings: {
+          slidesPerRow: 2,
+          rows: 2,
+        }
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesPerRow: 1,
+          rows: 1,
+        }
+      },
+    ]
   });
 
   $('.popular__control-tab').on('click', function (e) {
@@ -133,4 +132,59 @@ $(function () {
   $('.contacts__form-input--phone').inputmask({
     "mask": "+9 (999) 999 9999"
   });
+
+  $('.slider-syncing__for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    nextArrow: '<button type="button" class="slick-next"><svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z"/></svg></button>',
+    prevArrow: '<button type="button" class="slick-prev"><svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M 12.96875 4.28125 L 11.53125 5.71875 L 21.8125 16 L 11.53125 26.28125 L 12.96875 27.71875 L 23.96875 16.71875 L 24.65625 16 L 23.96875 15.28125 Z"/></svg></button>',
+    asNavFor: '.slider-syncing__nav',
+    infinite: false,
+  });
+  $('.slider-syncing__nav').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    asNavFor: '.slider-syncing__for',
+    dots: false,
+    centerMode: false,
+    focusOnSelect: true,
+    centerPadding: '10px',
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          centerMode: true,
+        }
+      },
+    ]
+  });
+
+  $(".card--mugs__items a").each(function () {
+
+    $(this).on("mouseenter", function (e) {
+      e.preventDefault();
+
+      let dataTitle = $(this).attr('data-title');
+      let dataSrc = $(this).attr('data-src');
+      let dataSource = $(this).attr('data-source');
+      let dataHref = $(this).attr('href');
+      let linkParrent = $(this).parents('.card--mugs');
+
+      if (dataTitle) {
+        linkParrent.find('.card__title').text(dataTitle);
+      }
+      if (dataSrc) {
+        linkParrent.find('picture img').attr('src', dataSrc);
+      }
+      if (dataSource) {
+        linkParrent.find('picture source').attr('srcset', dataSource);
+      }
+      if (dataHref) {
+        linkParrent.find('.card--mugs__link').attr('href', dataHref);
+      }
+    });
+  });
+
 });

@@ -144,7 +144,7 @@ body {
   border-radius: 12px;
 
   &__img {
-    margin: 0 auto;
+    margin: 0 auto 7px;
   }
 
   &__title {
@@ -169,6 +169,45 @@ body {
       margin-bottom: 10px;
       font-size: 10px;
       text-align: end;
+    }
+  }
+
+  &--mugs {
+    padding: 12px;
+
+    .card {
+      &__title {
+        margin-bottom: 2px;
+      }
+
+      &__price {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__text {
+      font-size: 10px;
+    }
+
+    &__items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      display: block;
+      border: none;
+      border-radius: 5px;
+      padding: 0;
+      width: 25px;
+      height: 25px;
+      box-shadow: $box-shadow;
+      margin-bottom: 5px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
     }
   }
 }
@@ -304,4 +343,11 @@ body {
 .fancybox-can-swipe .fancybox-content,
 .fancybox-can-pan .fancybox-content {
   cursor: default;
+}
+
+.section--decor {
+  background:
+    url('../images/content/category/decor--left.png') no-repeat center left,
+    url('../images/content/category/decor--right.png') no-repeat center right;
+  background-size: 30%;
 }
