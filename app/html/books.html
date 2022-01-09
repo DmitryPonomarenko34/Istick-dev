@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/books.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="site-container">
+    @@include('components/_header.html')
+    <main class="main">
+      <section class="books section--decor">
+        <div class="container">
+          <div class="books__inner">
+            <div class="books__slider slider-syncing">
+              <div class="slider-syncing__for">
+                <div class="slider-syncing__for-item">
+                  <picture>
+                    <source srcset="images/content/books/big-1.webp" type="image/webp">
+                    <img class="books__for-img slider-syncing__for-img" src="images/content/books/big-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="slider-syncing__for-item">
+                  <picture>
+                    <source srcset="images/content/books/big-1.webp" type="image/webp">
+                    <img class="books__for-img slider-syncing__for-img" src="images/content/books/big-1.png" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="slider-syncing__nav">
+                <div class="slider-syncing__nav-item">
+                  <picture>
+                    <source srcset="images/content/books/thumb-1.webp" type="image/webp">
+                    <img class="books__nav-img slider-syncing__nav-img" src="images/content/books/thumb-1.png" alt="">
+                  </picture>
+                </div>
+                <div class="slider-syncing__nav-item">
+                  <picture>
+                    <source srcset="images/content/books/thumb-1.webp" type="image/webp">
+                    <img class="books__nav-img slider-syncing__nav-img" src="images/content/books/thumb-1.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="books__control">
+              <h3 class="books__control-title title">
+                Softcover Photo Books
+              </h3>
+              <div class="books__tabs">
+                <a class="books__control-link accent-link" href="#">
+                  15x20 cm
+                </a>
+                <a class="books__control-link accent-link" href="#">
+                  20x15 cm
+                </a>
+                <a class="books__control-link accent-link" href="#">
+                  20x20 cm
+                </a>
+                <a class="books__control-link accent-link" href="#">
+                  28x20 cm
+                </a>
+                <a class="books__control-link accent-link" href="#">
+                  30x30 cm
+                </a>
+              </div>
+              <div class="books__control-form">
+                <div class="books__control-box">
+                  <label class="books__control-label">
+                    <h5 class="books__control-title title">
+                      Numbers of spreads
+                      </h3>
+                      <input class="books__control-input accent-input" type="number" value="11" min="1" max="999">
+                  </label>
+                  <label class="books__control-label">
+                    <h5 class="books__control-title title">
+                      Print run
+                      </h3>
+                      <input class="books__control-input accent-input" type="number" min="1" max="999" value="1">
+                  </label>
+                </div>
+                <div class="books__control-items">
+                  <div class="books__control-price">
+                    Price: 200,00₪
+                  </div>
+                  <a class="books__control-btn accent-link" href="#">
+                    Get started
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="books__catalog">
+            <div class="container">
+              <h2 class="books__catalog-title title">
+                Photo Book Catalog
+              </h2>
+              <div class="books__catalog-inner">
+                <a class="card" href="#">
+                  <picture>
+                    <source srcset="images/content/books/01.webp" type="image/webp" loading="lazy">
+                    <img class="card__img" src="images/content/books/01.png" alt="" loading="lazy">
+                  </picture>
+                  <span class="card__title">
+                    Photo prints
+                  </span>
+                  <p class="card__text">
+                    Softcover Photo Book
+                  </p>
+                  <span class="card__price">
+                    from 18,00 ₪
+                  </span>
+                </a>
+                <a class="card" href="#">
+                  <picture>
+                    <source srcset="images/content/books/02.webp" type="image/webp" loading="lazy">
+                    <img class="card__img" src="images/content/books/02.png" alt="" loading="lazy">
+                  </picture>
+                  <span class="card__title">
+                    Photo prints
+                  </span>
+                  <p class="card__text">
+                    Softcover Photo Book
+                  </p>
+                  <span class="card__price">
+                    from 18,00 ₪
+                  </span>
+                </a>
+                <a class="card" href="#">
+                  <picture>
+                    <source srcset="images/content/books/03.webp" type="image/webp" loading="lazy">
+                    <img class="card__img" src="images/content/books/03.png" alt="" loading="lazy">
+                  </picture>
+                  <span class="card__title">
+                    Photo prints
+                  </span>
+                  <p class="card__text">
+                    Softcover Photo Book
+                  </p>
+                  <span class="card__price">
+                    from 18,00 ₪
+                  </span>
+                </a>
+                <a class="card" href="#">
+                  <picture>
+                    <source srcset="images/content/books/04.webp" type="image/webp" loading="lazy">
+                    <img class="card__img" src="images/content/books/04.png" alt="" loading="lazy">
+                  </picture>
+                  <span class="card__title">
+                    Photo prints
+                  </span>
+                  <p class="card__text">
+                    Softcover Photo Book
+                  </p>
+                  <span class="card__price">
+                    from 18,00 ₪
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+
+  <div class="quick-form__box" id="product-popup">
+    <form class="quick-form" action="#">
+      <h4 class="title">
+        Quick Order Form
+      </h4>
+      <div class="quick-form__content">
+        <div class="quick-form__items">
+          <label class="quick-form__label">
+            <span class="quick-form__text">Full Name</span>
+            <input class="quick-form__input accent-input" type="tel" name="tel" placeholder="Vasily Vasiliev" required>
+          </label>
+          <label class="quick-form__label">
+            <span class="quick-form__text">Phone number</span>
+            <input class="quick-form__input quick-form__input--phone accent-input" type="tel" name="phone"
+              placeholder="+9 (999) 999 9999" required>
+          </label>
+          <label class="quick-form__label">
+            <span class="quick-form__text">Email</span>
+            <input class="quick-form__input accent-input" type="email" name="email" placeholder="j.smith@email.com"
+              required>
+          </label>
+        </div>
+        <input class="quick-form__file" type="file"
+          accept=".jpg, .jpeg, .png,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+      </div>
+      <textarea class="quick-form__textarea accent-input" name="message" required></textarea>
+      <button class="quick-form__btn accent-link" type="submit">
+        Place Order
+      </button>
+      <p class="quick-form__copy">
+        By clicking "Place Order" I agree to the processing of my personal data in accordance with the
+      </p>
+    </form>
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

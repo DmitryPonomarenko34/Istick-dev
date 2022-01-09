@@ -1,0 +1,89 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'node_modules/slick-carousel/slick/slick.scss';
+@import 'global';
+@import 'components/header';
+@import 'components/footer';
+
+.books {
+  padding: 30px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__control {
+    max-width: 50%;
+  }
+
+  &__slider {
+    margin-right: 25px;
+  }
+
+  &__nav-img {
+    border-radius: 10px;
+  }
+
+  &__for-img {
+    border-radius: 20px;
+  }
+
+  &__tabs {}
+
+  &__control-link {
+    margin-right: 25px;
+    margin-bottom: 30px;
+  }
+
+  &__control-form {}
+
+  &__control-box {
+    display: flex;
+  }
+
+  &__control-title {
+    font-size: 20px;
+  }
+
+  &__control-label {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__control-input {
+    width: 100%;
+    padding-left: 30px;
+    max-width: 255px;
+  }
+
+  &__control-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__control-price {
+    font-size: 20px;
+    margin-right: 27px;
+  }
+
+  &__control-btn {}
+
+  &__catalog {
+    padding-top: 50px;
+  }
+
+  &__catalog-inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@import 'media';

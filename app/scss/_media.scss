@@ -105,6 +105,21 @@
   .section--decor {
     background: none;
   }
+
+  .books {
+    &__control-box {
+      display: block;
+    }
+
+    &__control-input {
+      max-width: none;
+    }
+
+    &__control-link {
+      margin-right: 10px;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -453,6 +468,24 @@
       max-width: 50%;
     }
   }
+
+  .books {
+    &__slider {
+      margin: 0 auto 20px;
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__for-img {
+      margin: 0 auto;
+    }
+
+    &__control {
+      max-width: 100%;
+    }
+  }
 }
 
 @include tablet-L {
@@ -582,6 +615,12 @@
       height: 100px;
       object-fit: cover;
       margin: 0 auto;
+    }
+  }
+
+  .books {
+    &__slider {
+      max-width: none;
     }
   }
 }
@@ -753,6 +792,31 @@
   .slider-syncing {
     &__nav-img {
       height: 90px;
+    }
+
+    &__for {
+      .slick-arrow {
+        display: none;
+      }
+    }
+  }
+
+  .books {
+    &__control-items {
+      display: block;
+    }
+
+    &__catalog {
+      padding-top: 20px;
+    }
+
+    &__catalog-title {
+      font-size: 20px;
+    }
+
+    &__control-price {
+      margin-right: 0;
+      margin-bottom: 20px;
     }
   }
 }
