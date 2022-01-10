@@ -11,9 +11,6 @@ $(function () {
   let firstBlockPadding = $('main section:first').css('padding-top');
   let paddingTop = headerScrollTop + parseInt(firstBlockPadding.match(/\d+/));
 
-  console.log(firstBlockPadding);
-  console.log(headerScrollTop);
-
   if ($(window).width() <= 1200) {
     $('.header__info-link--marker').removeClass('header__info-link').prependTo('.header__action-items');
     headerScrollTop = header.outerHeight();
@@ -133,6 +130,10 @@ $(function () {
     "mask": "+9 (999) 999 9999"
   });
 
+  $('.quick-form__input--phone').inputmask({
+    "mask": "+9 (999) 999 9999"
+  });
+
   $('.slider-syncing__for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -151,14 +152,12 @@ $(function () {
     centerMode: false,
     focusOnSelect: true,
     centerPadding: '10px',
-    responsive: [
-      {
-        breakpoint: 769,
-        settings: {
-          centerMode: true,
-        }
-      },
-    ]
+    responsive: [{
+      breakpoint: 769,
+      settings: {
+        centerMode: true,
+      }
+    }, ]
   });
 
   $(".card--mugs__items a").each(function () {
@@ -186,5 +185,30 @@ $(function () {
       }
     });
   });
+
+  $(".basket__product a.basket__product-link--remove").each(function () {
+    let quality = $(this).parents('.basket__product').find('.basket__product-quality').html();
+
+    if (quality <= 0) {
+      $(this).parents('.basket__product').remove();
+    }
+
+    $(this).on('click', function (e) {
+      e.preventDefault();
+      $(this).parents('.basket__product').find(--quality);
+      $(this).parents('.basket__product').find('.basket__product-quality').text(quality);
+
+      if (quality <= 0) {
+        $(this).parents('.basket__product').remove();
+      }
+    });
+  });
+
+  $('.scroll-top').on('click', function () {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
+  })
 
 });

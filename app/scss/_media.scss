@@ -91,8 +91,6 @@
   }
 
   .popular {
-    &__control {}
-
     &__control-tab {
       margin-right: 20px;
 
@@ -158,11 +156,10 @@
     background-color: #31353a;
 
     &__lang {
-      display: block;
-      padding: 15px 15px 20px;
       display: flex;
       align-items: center;
       border-bottom: 1px solid #fff;
+      padding: 15px 15px 20px;
     }
 
     &__lang-text {
@@ -187,8 +184,8 @@
     }
 
     &__item {
-      padding: 10px 15px;
       display: block;
+      padding: 10px 15px;
       color: #fff;
     }
 
@@ -198,8 +195,8 @@
 
     &__list {
       display: block;
-      padding: 15px 15px 20px;
       border-bottom: 1px solid #fff;
+      padding: 15px 15px 20px;
     }
 
     &__list-item {
@@ -210,19 +207,19 @@
 
     &__list-link {
       position: relative;
-      padding-left: 20px;
       display: inline-block;
+      padding-left: 20px;
       color: #fff;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 1px;
         width: 16px;
         height: 16px;
-        background-repeat: no-repeat;
         background-size: cover;
+        background-repeat: no-repeat;
       }
 
       &--active {
@@ -231,43 +228,43 @@
 
       &--cart {
         &::before {
-          background-image: url('../images/icons/multi/spriteMulti.svg#basket');
+          background-image: url("../images/icons/multi/spriteMulti.svg#basket");
         }
       }
 
       &--login {
         &::before {
-          background-image: url('../images/icons/multi/spriteMulti.svg#key');
+          background-image: url("../images/icons/multi/spriteMulti.svg#key");
         }
       }
 
       &--reg {
         &::before {
-          background-image: url('../images/icons/multi/spriteMulti.svg#user');
+          background-image: url("../images/icons/multi/spriteMulti.svg#user");
         }
       }
 
       &--marker {
         &::before {
-          background-image: url('../images/icons/multi/spriteMulti.svg#nav-marker');
+          background-image: url("../images/icons/multi/spriteMulti.svg#nav-marker");
         }
       }
 
       &--tel {
         &::before {
-          background-image: url('../images/icons/multi/spriteMulti.svg#phone');
+          background-image: url("../images/icons/multi/spriteMulti.svg#phone");
         }
       }
 
       &--wallet {
         &::before {
-          background-image: url('../images/icons/multi/spriteMulti.svg#wallet');
+          background-image: url("../images/icons/multi/spriteMulti.svg#wallet");
         }
       }
 
       &--question {
         &::before {
-          background-image: url('../images/icons/multi/spriteMulti.svg#question');
+          background-image: url("../images/icons/multi/spriteMulti.svg#question");
         }
       }
     }
@@ -317,17 +314,17 @@
         &__item-text {
           position: relative;
           margin-bottom: 15px;
-          padding: 15px 35px 15px;
+          padding: 15px 35px;
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             left: 15px;
+            top: 15px;
             width: 16px;
             height: 16px;
-            top: 15px;
-            background-repeat: no-repeat;
             background-size: cover;
+            background-repeat: no-repeat;
           }
 
           &::after {
@@ -345,66 +342,66 @@
 
           &--photos {
             &::before {
-              background-image: url('../images/icons/multi/spriteMulti.svg#photos');
+              background-image: url("../images/icons/multi/spriteMulti.svg#photos");
             }
           }
 
           &--photobooks {
             &::before {
-              background-image: url('../images/icons/multi/spriteMulti.svg#photo-books');
+              background-image: url("../images/icons/multi/spriteMulti.svg#photo-books");
             }
           }
 
           &--wallprints {
             &::before {
-              background-image: url('../images/icons/multi/spriteMulti.svg#wallprints');
+              background-image: url("../images/icons/multi/spriteMulti.svg#wallprints");
             }
           }
 
           &--calendar {
             &::before {
-              background-image: url('../images/icons/multi/spriteMulti.svg#calendar');
+              background-image: url("../images/icons/multi/spriteMulti.svg#calendar");
             }
           }
 
           &--gifts {
             &::before {
-              background-image: url('../images/icons/multi/spriteMulti.svg#gifts');
+              background-image: url("../images/icons/multi/spriteMulti.svg#gifts");
             }
           }
 
           &--promo {
             &::before {
-              background-image: url('../images/icons/multi/spriteMulti.svg#promo-materials');
+              background-image: url("../images/icons/multi/spriteMulti.svg#promo-materials");
             }
           }
 
           &--outdoor {
             &::before {
-              background-image: url('../images/icons/multi/spriteMulti.svg#outdoor-printing');
+              background-image: url("../images/icons/multi/spriteMulti.svg#outdoor-printing");
             }
           }
         }
       }
 
       .sub-sub-menu {
+        position: static;
         display: none;
         padding: 0;
-        position: static;
-        opacity: 1;
-        visibility: visible;
         width: 100%;
         height: auto;
-        background-color: transparent;
         box-shadow: none;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
 
         &__list {
           column-count: 1;
         }
 
         &__list-text {
-          color: inherit;
           font-size: 13px;
+          color: inherit;
         }
 
         &__caption {
@@ -413,8 +410,8 @@
 
         &__list-link {
           padding-left: 15px;
-          color: #fff;
           text-align: start;
+          color: #fff;
         }
       }
     }
@@ -450,8 +447,8 @@
 
   .quick-form {
     &__box {
-      width: 80vw;
       padding: 15px 20px;
+      width: 80vw;
     }
   }
 
@@ -486,19 +483,46 @@
       max-width: 100%;
     }
   }
+
+  .basket {
+    &__product-label {
+      margin-right: 20px;
+    }
+
+    &__items {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__links {
+      transform: translateY(0);
+    }
+
+    &__links-link {
+      display: block;
+    }
+
+    &__popular {
+      padding-top: 50px;
+    }
+  }
 }
 
 @include tablet-L {
   .footer {
-    background-color: #e6e6e6;
     padding: 20px 0;
-
-    &__decor {
-      display: none;
-    }
+    background-color: #e6e6e6;
 
     &::before,
     &::after {
+      display: none;
+    }
+
+    &__decor {
       display: none;
     }
 
@@ -508,8 +532,8 @@
 
     &__box-form {
       order: -1;
-      width: 100%;
       margin-bottom: 20px;
+      width: 100%;
     }
   }
 
@@ -577,8 +601,6 @@
   }
 
   .quick-form {
-    &__content {}
-
     &__items {
       width: 100%;
     }
@@ -612,15 +634,48 @@
     }
 
     &__nav-img {
+      margin: 0 auto;
       height: 100px;
       object-fit: cover;
-      margin: 0 auto;
     }
   }
 
   .books {
     &__slider {
       max-width: none;
+    }
+  }
+
+  .basket {
+    &__product {
+      flex-wrap: wrap;
+    }
+
+    &__items-info {
+      margin-bottom: 20px;
+    }
+
+    &__product-box {
+      width: 100%;
+    }
+
+    &__product-actions {
+      margin-right: 30px;
+      margin-left: auto;
+    }
+
+    &__product-quality {
+      margin-right: 23px;
+    }
+
+    &__items-quality {
+      margin-right: 24px;
+    }
+
+    &__product-actions,
+    &__product-quality,
+    &__product-price {
+      order: -1;
     }
   }
 }
@@ -654,21 +709,21 @@
     }
 
     &__title {
-      font-size: 18px;
       position: relative;
+      font-size: 18px;
       cursor: pointer;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         right: 0;
         top: 50%;
         width: 18px;
         height: 18px;
-        transform: translateY(-50%);
-        background-image: url('../images/icons/multi/spriteMulti.svg#angle-down--title');
-        background-repeat: no-repeat;
+        background-image: url("../images/icons/multi/spriteMulti.svg#angle-down--title");
         background-size: 100%;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
       }
 
       &--active {
@@ -698,12 +753,10 @@
   .info-block {
     padding: 20px 0;
 
-    &__inner {}
-
     &__item {
       display: block;
-      text-align: center;
       width: 100%;
+      text-align: center;
     }
 
     &__item-icon {
@@ -712,8 +765,8 @@
     }
 
     &__item-text {
-      max-width: none;
       margin: 0 auto;
+      max-width: none;
     }
   }
 
@@ -774,8 +827,8 @@
     }
 
     &__form-caption {
-      max-width: none;
       margin-bottom: 15px;
+      max-width: none;
     }
   }
 

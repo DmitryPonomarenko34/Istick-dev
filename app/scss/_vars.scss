@@ -2,8 +2,7 @@ $default: #000;
 $accent: #fff;
 $title: #6667ab;
 $bg: #f0f0f3;
-$box-shadow: -10px -10px 30px #fff,
-10px 10px 30px rgba(174, 174, 192, 0.4);
+$box-shadow: -10px -10px 30px #fff,10px 10px 30px rgba(174, 174, 192, 0.4);
 
 %montserrat-light {
   font-family: "Montserrat-Light", sans-serif;
@@ -19,6 +18,16 @@ $box-shadow: -10px -10px 30px #fff,
   font-family: "Montserrat-Bold", sans-serif;
   font-weight: 700;
 }
+
+%checkbox-hidden,
+%radio-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
 
 %bg {
   background-position: center;

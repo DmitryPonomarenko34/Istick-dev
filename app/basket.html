@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/books.min.css">
+  <link rel="stylesheet" href="css/basket.min.css">
   <title>Document</title>
 </head>
 
@@ -703,153 +703,255 @@
   </div>
 </header>
     <main class="main">
-      <section class="books section--decor">
+      <section class="basket section--decor">
         <div class="container">
-          <div class="books__inner">
-            <div class="books__slider slider-syncing">
-              <div class="slider-syncing__for">
-                <div class="slider-syncing__for-item">
-                  <picture>
-                    <source srcset="images/content/books/big-1.webp" type="image/webp">
-                    <img class="books__for-img slider-syncing__for-img" src="images/content/books/big-1.png" alt="">
-                  </picture>
-                </div>
-                <div class="slider-syncing__for-item">
-                  <picture>
-                    <source srcset="images/content/books/big-1.webp" type="image/webp">
-                    <img class="books__for-img slider-syncing__for-img" src="images/content/books/big-1.png" alt="">
-                  </picture>
-                </div>
+          <h2 class="title">
+            Shopping cart
+          </h2>
+          <div class="basket__inner">
+            <div class="basket__items">
+              <div class="basket__items-info">
+                <label class="basket__product-label">
+                  <input class="basket__product-input" type="checkbox">
+                  <span class="basket__product-checkbox"></span>
+                </label>
+                <span class="basket__items-text">
+                  Product
+                </span>
+                <span class="basket__items-quality">
+                  Quality
+                </span>
+                <span class="basket__items-price">
+                  Price
+                </span>
               </div>
-              <div class="slider-syncing__nav">
-                <div class="slider-syncing__nav-item">
-                  <picture>
-                    <source srcset="images/content/books/thumb-1.webp" type="image/webp">
-                    <img class="books__nav-img slider-syncing__nav-img" src="images/content/books/thumb-1.png" alt="">
-                  </picture>
-                </div>
-                <div class="slider-syncing__nav-item">
-                  <picture>
-                    <source srcset="images/content/books/thumb-1.webp" type="image/webp">
-                    <img class="books__nav-img slider-syncing__nav-img" src="images/content/books/thumb-1.png" alt="">
-                  </picture>
-                </div>
-              </div>
-            </div>
-            <div class="books__control">
-              <h3 class="books__control-title title">
-                Softcover Photo Books
-              </h3>
-              <div class="books__tabs">
-                <a class="books__control-link accent-link" href="#">
-                  15x20 cm
-                </a>
-                <a class="books__control-link accent-link" href="#">
-                  20x15 cm
-                </a>
-                <a class="books__control-link accent-link" href="#">
-                  20x20 cm
-                </a>
-                <a class="books__control-link accent-link" href="#">
-                  28x20 cm
-                </a>
-                <a class="books__control-link accent-link" href="#">
-                  30x30 cm
-                </a>
-              </div>
-              <div class="books__control-form">
-                <div class="books__control-box">
-                  <label class="books__control-label">
-                    <h5 class="books__control-title title">
-                      Numbers of spreads
-                      </h3>
-                      <input class="books__control-input accent-input" type="number" value="11" min="1" max="999">
+              <div class="basket__product">
+                <div class="basket__product-box">
+                  <label class="basket__product-label">
+                    <input class="basket__product-input" type="checkbox" checked>
+                    <span class="basket__product-checkbox"></span>
                   </label>
-                  <label class="books__control-label">
-                    <h5 class="books__control-title title">
-                      Print run
-                      </h3>
-                      <input class="books__control-input accent-input" type="number" min="1" max="999" value="1">
-                  </label>
-                </div>
-                <div class="books__control-items">
-                  <div class="books__control-price">
-                    Price: 200,00₪
+                  <picture>
+                    <source srcset="images/content/mugs/04.webp" type="image/webp">
+                    <img class="basket__product-img" src="images/content/mugs/04.png" alt="">
+                  </picture>
+                  <div class="basket__product-wrapper">
+                    <p class="basket__product-caption">
+                      Black chameleon mug
+                    </p>
+                    <a class="basket__product-thumblink" href="#">
+                      Show all photo...
+                    </a>
                   </div>
-                  <a class="books__control-btn accent-link" href="#">
-                    Get started
+                </div>
+                <div class="basket__product-actions">
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#pencil"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#lists"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#repost"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link basket__product-link--remove" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#remove"></use>
+                    </svg>
                   </a>
                 </div>
+                <span class="basket__product-quality">
+                  2
+                </span>
+                <span class="basket__product-price">
+                  76,00 ₪
+                </span>
+              </div>
+              <div class="basket__product">
+                <div class="basket__product-box">
+                  <label class="basket__product-label">
+                    <input class="basket__product-input" type="checkbox" checked>
+                    <span class="basket__product-checkbox"></span>
+                  </label>
+                  <picture>
+                    <source srcset="images/content/mugs/04.webp" type="image/webp">
+                    <img class="basket__product-img" src="images/content/mugs/04.png" alt="">
+                  </picture>
+                  <div class="basket__product-wrapper">
+                    <p class="basket__product-caption">
+                      Black chameleon mug
+                    </p>
+                    <a class="basket__product-thumblink" href="#">
+                      Show all photo...
+                    </a>
+                  </div>
+                </div>
+                <div class="basket__product-actions">
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#pencil"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#lists"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#repost"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link basket__product-link--remove" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#remove"></use>
+                    </svg>
+                  </a>
+                </div>
+                <span class="basket__product-quality">
+                  2
+                </span>
+                <span class="basket__product-price">
+                  76,00 ₪
+                </span>
+              </div>
+              <div class="basket__product">
+                <div class="basket__product-box">
+                  <label class="basket__product-label">
+                    <input class="basket__product-input" type="checkbox" checked>
+                    <span class="basket__product-checkbox"></span>
+                  </label>
+                  <picture>
+                    <source srcset="images/content/mugs/04.webp" type="image/webp">
+                    <img class="basket__product-img" src="images/content/mugs/04.png" alt="">
+                  </picture>
+                  <div class="basket__product-wrapper">
+                    <p class="basket__product-caption">
+                      Black chameleon mug
+                    </p>
+                    <a class="basket__product-thumblink" href="#">
+                      Show all photo...
+                    </a>
+                  </div>
+                </div>
+                <div class="basket__product-actions">
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#pencil"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#lists"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#repost"></use>
+                    </svg>
+                  </a>
+                  <a class="basket__product-link basket__product-link--remove" href="#">
+                    <svg class="basket__product-icon">
+                      <use xlink:href="images/icons/mono/spriteMono.svg#remove"></use>
+                    </svg>
+                  </a>
+                </div>
+                <span class="basket__product-quality">
+                  0
+                </span>
+                <span class="basket__product-price">
+                  76,00 ₪
+                </span>
               </div>
             </div>
+            <div class="basket__links">
+              <span class="basket__price">
+                Total: 76,00 ₪
+              </span>
+              <a class="basket__links-link accent-link" href="#">
+                Checkout
+              </a>
+              <a class="basket__links-link accent-link" href="#">
+                Quick order
+              </a>
+              <a class="basket__links-thumb" href="#">
+                Continue shopping
+              </a>
+            </div>
           </div>
-          <div class="books__catalog">
-            <div class="container">
-              <h2 class="books__catalog-title title">
-                Photo Book Catalog
-              </h2>
-              <div class="books__catalog-inner">
-                <a class="card" href="#">
-                  <picture>
-                    <source srcset="images/content/books/01.webp" type="image/webp" loading="lazy">
-                    <img class="card__img" src="images/content/books/01.png" alt="" loading="lazy">
-                  </picture>
-                  <span class="card__title">
-                    Photo prints
-                  </span>
-                  <p class="card__text">
-                    Softcover Photo Book
-                  </p>
-                  <span class="card__price">
-                    from 18,00 ₪
-                  </span>
-                </a>
-                <a class="card" href="#">
-                  <picture>
-                    <source srcset="images/content/books/02.webp" type="image/webp" loading="lazy">
-                    <img class="card__img" src="images/content/books/02.png" alt="" loading="lazy">
-                  </picture>
-                  <span class="card__title">
-                    Photo prints
-                  </span>
-                  <p class="card__text">
-                    Softcover Photo Book
-                  </p>
-                  <span class="card__price">
-                    from 18,00 ₪
-                  </span>
-                </a>
-                <a class="card" href="#">
-                  <picture>
-                    <source srcset="images/content/books/03.webp" type="image/webp" loading="lazy">
-                    <img class="card__img" src="images/content/books/03.png" alt="" loading="lazy">
-                  </picture>
-                  <span class="card__title">
-                    Photo prints
-                  </span>
-                  <p class="card__text">
-                    Softcover Photo Book
-                  </p>
-                  <span class="card__price">
-                    from 18,00 ₪
-                  </span>
-                </a>
-                <a class="card" href="#">
-                  <picture>
-                    <source srcset="images/content/books/04.webp" type="image/webp" loading="lazy">
-                    <img class="card__img" src="images/content/books/04.png" alt="" loading="lazy">
-                  </picture>
-                  <span class="card__title">
-                    Photo prints
-                  </span>
-                  <p class="card__text">
-                    Softcover Photo Book
-                  </p>
-                  <span class="card__price">
-                    from 18,00 ₪
-                  </span>
-                </a>
-              </div>
+        </div>
+        <div class="basket__popular">
+          <div class="container">
+            <h3 class="title">
+              Popular product
+            </h3>
+            <div class="basket__popular-inner">
+              <a class="card" href="#">
+                <picture>
+                  <source srcset="images/content/books/01.webp" type="image/webp" loading="lazy">
+                  <img class="card__img" src="images/content/books/01.png" alt="" loading="lazy">
+                </picture>
+                <span class="card__title">
+                  Photo prints
+                </span>
+                <p class="card__text">
+                  Softcover Photo Book
+                </p>
+                <span class="card__price">
+                  from 18,00 ₪
+                </span>
+              </a>
+              <a class="card" href="#">
+                <picture>
+                  <source srcset="images/content/books/01.webp" type="image/webp" loading="lazy">
+                  <img class="card__img" src="images/content/books/01.png" alt="" loading="lazy">
+                </picture>
+                <span class="card__title">
+                  Photo prints
+                </span>
+                <p class="card__text">
+                  Softcover Photo Book
+                </p>
+                <span class="card__price">
+                  from 18,00 ₪
+                </span>
+              </a>
+              <a class="card" href="#">
+                <picture>
+                  <source srcset="images/content/books/01.webp" type="image/webp" loading="lazy">
+                  <img class="card__img" src="images/content/books/01.png" alt="" loading="lazy">
+                </picture>
+                <span class="card__title">
+                  Photo prints
+                </span>
+                <p class="card__text">
+                  Softcover Photo Book
+                </p>
+                <span class="card__price">
+                  from 18,00 ₪
+                </span>
+              </a>
+              <a class="card" href="#">
+                <picture>
+                  <source srcset="images/content/books/01.webp" type="image/webp" loading="lazy">
+                  <img class="card__img" src="images/content/books/01.png" alt="" loading="lazy">
+                </picture>
+                <span class="card__title">
+                  Photo prints
+                </span>
+                <p class="card__text">
+                  Softcover Photo Book
+                </p>
+                <span class="card__price">
+                  from 18,00 ₪
+                </span>
+              </a>
             </div>
           </div>
         </div>

@@ -1,20 +1,20 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
-@import 'components/header';
-@import 'components/footer';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+@import "components/header";
+@import "components/footer";
 
 .category {
   padding: 20px 0;
 
   &__inner {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-right: -1%;
   }
 }
 
-@import 'media';
+@import "media";

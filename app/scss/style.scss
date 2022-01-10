@@ -1,12 +1,12 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import '../../node_modules/rateyo/src/jquery.rateyo';
-@import 'node_modules/slick-carousel/slick/slick.scss';
-@import 'global';
-@import 'components/header';
-@import 'components/footer';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "../../node_modules/rateyo/src/jquery.rateyo";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "global";
+@import "components/header";
+@import "components/footer";
 
 .first {
   padding: 58px 0 80px;
@@ -17,8 +17,8 @@
 
   &__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__info {
@@ -39,15 +39,15 @@
     padding-left: 20px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 3px;
+      border-radius: 3px;
       width: 10px;
       height: 10px;
-      border-radius: 3px;
-      background: $title;
       box-shadow: $box-shadow;
+      background: $title;
     }
 
     &:not(:last-child) {
@@ -66,7 +66,6 @@
 }
 
 .popular {
-
   &__control {
     display: flex;
     flex-wrap: wrap;
@@ -74,8 +73,8 @@
   }
 
   &__control-tab {
-    font-size: 17px;
     margin-bottom: 15px;
+    font-size: 17px;
 
     &:not(:last-child) {
       margin-right: 37px;
@@ -88,15 +87,15 @@
 
   &__content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex-wrap: wrap
   }
 
   &__content-item {
     display: none;
-    width: 23%;
     margin-right: 1%;
     margin-bottom: 20px;
+    width: 23%;
 
     &:nth-child(4n) {
       margin-right: 0;
@@ -113,14 +112,14 @@
 
   &__inner {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__item {
-    width: 33.333%;
     margin-right: 1%;
     margin-bottom: 20px;
+    width: 33.333%;
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -132,16 +131,6 @@
   position: relative;
   padding: 25px 0;
 
-  &__decor--1,
-  &__decor--2 {
-    display: block;
-    position: absolute;
-    height: 320px;
-    width: 100%;
-    z-index: -1;
-    object-fit: cover;
-  }
-
   &__decor--1 {
     top: 0;
   }
@@ -150,8 +139,6 @@
     top: auto;
     bottom: 0;
   }
-
-  .slick-slide {}
 
   &__slider {
     margin: 0 -15px -20px;
@@ -174,17 +161,17 @@
     justify-content: center;
 
     button {
+      border: none;
+      border-radius: 50%;
       width: 12px;
       height: 12px;
-      border-radius: 50%;
-      background-color: #dbdbdb;
       font-size: 0;
       line-height: 0;
-      border: none;
+      background-color: #dbdbdb;
       cursor: pointer;
     }
 
-    li+li {
+    li + li {
       margin-left: 5px;
     }
   }
@@ -194,15 +181,25 @@
       background-color: $title;
     }
   }
+
+  &__decor--1,
+  &__decor--2 {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
 }
 
 .news {
   padding: 20px 0;
 
   &__item {
-    width: 31.333%;
     margin-right: 2%;
     margin-bottom: 20px;
+    width: 31.333%;
 
     &:nth-child(3n) {
       margin-right: 0;
@@ -211,8 +208,8 @@
 
   &__inner {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -230,9 +227,9 @@
   }
 
   &__info {
-    width: 50%;
     flex-shrink: 1;
     margin-right: 3%;
+    width: 50%;
   }
 
   &__info-item {
@@ -250,16 +247,14 @@
   }
 
   &__info-icon {
+    margin-right: 10px;
     width: 91px;
     height: 70px;
-    margin-right: 10px;
   }
 
   &__info-caption {
     font-size: 20px;
   }
-
-  &__info-text {}
 
   &__box {
     flex-shrink: 1;
@@ -272,13 +267,35 @@
 
   &__form-label {
     display: block;
-    width: 100%;
     margin-bottom: 10px;
+    width: 100%;
   }
 
   &__form-text {
-    margin-bottom: 5px;
     display: block;
+    margin-bottom: 5px;
+  }
+
+  &__form-items {
+    display: flex;
+    column-gap: 15px;
+    justify-content: space-between;
+  }
+
+  &__form-textarea {
+    height: 150px;
+    resize: none;
+  }
+
+  &__form-caption {
+    max-width: 335px;
+    font-size: 10px;
+  }
+
+  &__form-elements {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
   }
 
   &__form-input,
@@ -288,31 +305,6 @@
     width: 100%;
     max-width: none;
   }
-
-  &__form-items {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 15px;
-  }
-
-  &__form-textarea {
-    height: 150px;
-    resize: none;
-  }
-
-  &__form-caption {
-    font-size: 10px;
-    max-width: 335px;
-  }
-
-  &__form-elements {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__form-btn {}
 }
 
-
-@import 'media';
+@import "media";

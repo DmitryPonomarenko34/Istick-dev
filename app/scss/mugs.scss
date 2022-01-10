@@ -1,11 +1,11 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'node_modules/slick-carousel/slick/slick.scss';
-@import 'global';
-@import 'components/header';
-@import 'components/footer';
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "global";
+@import "components/header";
+@import "components/footer";
 
 .mugs {
   padding: 75px 0;
@@ -29,8 +29,6 @@
     margin-bottom: 28px;
   }
 
-  &__info-links {}
-
   &__info-link {
     margin-bottom: 20px;
 
@@ -50,4 +48,4 @@
   }
 }
 
-@import 'media';
+@import "media";

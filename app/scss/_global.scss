@@ -8,6 +8,7 @@ body {
   line-height: 18px;
   color: $default;
   background-color: $bg;
+
   @extend %montserrat-light;
 }
 
@@ -33,14 +34,35 @@ body {
   overflow-y: hidden;
 }
 
-.title {
-  font-size: 25px;
-  color: $title;
-  margin-bottom: 25px;
-  line-height: 30px;
-  @extend %montserrat-bold;
+.scroll-top {
+  position: fixed;
+  right: 15px;
+  bottom: 50px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: $title;
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    transform: rotate(-180deg);
+  }
 }
 
+.title {
+  margin-bottom: 25px;
+  font-size: 25px;
+  line-height: 30px;
+  color: $title;
+
+  @extend %montserrat-bold;
+}
 
 .burger {
   position: relative;
@@ -126,22 +148,22 @@ body {
   border: 1px solid $title;
   border-radius: 12px;
   padding: 11px 31px;
+  max-width: 160px;
   box-shadow: $box-shadow;
   color: inherit;
   cursor: pointer;
 }
 
 .card {
-  width: 100%;
   display: block;
-  width: 23.333%;
   margin-right: 1%;
   margin-bottom: 20px;
-  min-height: 240px;
-  padding: 17px 30px;
-  background-color: $bg;
-  box-shadow: $box-shadow;
   border-radius: 12px;
+  padding: 17px 30px;
+  width: 23.333%;
+  min-height: 240px;
+  box-shadow: $box-shadow;
+  background-color: $bg;
 
   &__img {
     margin: 0 auto 7px;
@@ -149,8 +171,8 @@ body {
 
   &__title {
     display: block;
-    font-size: 17px;
     margin-bottom: 5px;
+    font-size: 17px;
   }
 
   &__price {
@@ -164,8 +186,8 @@ body {
 
   &--news {
     &__title {
-      font-size: 20px;
       margin-bottom: 10px;
+      font-size: 20px;
     }
 
     &__time {
@@ -195,19 +217,19 @@ body {
 
     &__items {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     &__item {
       display: block;
+      margin-bottom: 5px;
       border: none;
       border-radius: 5px;
       padding: 0;
       width: 25px;
       height: 25px;
       box-shadow: $box-shadow;
-      margin-bottom: 5px;
 
       &:not(:last-child) {
         margin-right: 5px;
@@ -221,21 +243,21 @@ body {
 
   &__inner {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__item {
     display: flex;
     align-items: center;
-    width: 25%;
     margin-bottom: 20px;
+    width: 25%;
   }
 
   &__item-icon {
+    margin-right: 10px;
     width: 90px;
     height: 70px;
-    margin-right: 10px;
   }
 
   &__item-text {
@@ -248,8 +270,8 @@ body {
 }
 
 .review {
-  padding: 12px 14px;
   border-radius: 12px;
+  padding: 12px 14px;
   min-height: 320px;
   max-width: 335px;
   box-shadow: $box-shadow;
@@ -261,15 +283,13 @@ body {
     margin-bottom: 21px;
   }
 
-  &__info-box {}
-
   &__avatar {
     display: inline-block;
     overflow: hidden;
+    margin-right: 25px;
     border-radius: 50%;
     width: 70px;
     height: 70px;
-    margin-right: 25px;
   }
 
   &__avatar-img {
@@ -277,15 +297,15 @@ body {
   }
 
   &__name {
-    font-size: 17px;
     display: block;
     margin-bottom: 5px;
+    font-size: 17px;
   }
 
   &__date {
+    display: block;
     margin-bottom: 10px;
     font-size: 10px;
-    display: block;
   }
 
   &__text {}
@@ -295,15 +315,13 @@ body {
   padding: 20px -15px;
 
   .error {
-    color: red;
     font-size: 17px;
+    color: red;
   }
 
   &__box {
     display: none;
   }
-
-  &__content {}
 
   &__items {
     width: 50%;
@@ -320,27 +338,25 @@ body {
     margin-bottom: 10px;
   }
 
-  &__input,
-  &__textarea {
-    width: 100%;
-    padding-left: 20px;
-    max-width: none;
-  }
-
   &__file {
     margin-bottom: 20px;
   }
 
   &__textarea {
-    resize: none;
-    height: 150px;
     margin-bottom: 20px;
+    height: 150px;
+    resize: none;
   }
-
-  &__copy {}
 
   &__btn {
     margin-bottom: 20px;
+  }
+
+  &__input,
+  &__textarea {
+    padding-left: 20px;
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -351,8 +367,8 @@ body {
 
 .section--decor {
   background:
-    url('../images/content/category/decor--left.png') no-repeat center left,
-    url('../images/content/category/decor--right.png') no-repeat center right;
+    url("../images/content/category/decor--left.png") no-repeat center left,
+    url("../images/content/category/decor--right.png") no-repeat center right;
   background-size: 30%;
 }
 
@@ -364,23 +380,23 @@ body {
 
     .slick-arrow {
       position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       left: 15px;
       top: 50%;
-      transform: translateY(-50%);
-      height: 45px;
-      width: 45px;
-      border-radius: 5px;
-      background-color: $title;
       z-index: 2;
-      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border: none;
+      border-radius: 5px;
       padding: 0;
+      width: 45px;
+      height: 45px;
+      background-color: $title;
       opacity: 0;
       visibility: hidden;
+      transform: translateY(-50%);
       transition: ease 0.3s opacity, ease 0.3s visibility, ease 0.3s background-color;
+      cursor: pointer;
 
       svg {
         fill: #fff;
@@ -394,8 +410,8 @@ body {
     }
 
     .slick-next {
-      right: 15px;
       left: auto;
+      right: 15px;
     }
 
     &:hover {
@@ -417,10 +433,6 @@ body {
       }
     }
   }
-
-  &__for-item {}
-
-  &__for-img {}
 
   &__nav {
     margin: 0 -10px;

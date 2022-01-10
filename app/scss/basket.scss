@@ -1,0 +1,168 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "libs";
+@import "global";
+@import "components/header";
+@import "components/footer";
+
+.basket {
+  padding: 30px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__items {
+    flex: 1 1 auto;
+    margin-right: 53px;
+    max-width: 100%;
+  }
+
+  &__price {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  &__items-quality {
+    margin-right: 32px;
+  }
+
+  &__items-text {
+    flex: 1 1 auto;
+  }
+
+  &__items-info {
+    display: flex;
+    margin-bottom: 40px;
+    font-size: 20px;
+  }
+
+  &__product-label {
+    margin-right: 60px;
+  }
+
+  &__product-input {
+    &:checked + .basket__product-checkbox {
+      background-image: url("../images/icons/multi/spriteMulti.svg#check");
+      background-position: center center;
+      background-size: 20px 14px;
+      background-repeat: no-repeat;
+    }
+
+    @extend %checkbox-hidden;
+  }
+
+  &__product-checkbox {
+    display: block;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    box-shadow: $box-shadow;
+    background-color: #ececec;
+    cursor: pointer;
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__product-img {
+    margin-right: 20px;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+  }
+
+  &__product-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: #000;
+  }
+
+  &__product-box {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+  }
+
+  &__product-caption {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  &__product-thumblink {
+    font-size: 15px;
+    color: $title;
+  }
+
+  &__product-actions {
+    display: flex;
+    margin-right: 51px;
+  }
+
+  &__product-link {
+    display: inline-flex;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__product-quality {
+    position: relative;
+    display: block;
+    margin-right: 40px;
+    padding-right: 20px;
+    font-size: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 2px;
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/icons/multi/spriteMulti.svg#angle-retime");
+
+      @extend %bg;
+    }
+  }
+
+  &__product-price {
+    font-size: 20px;
+  }
+
+  &__links {
+    transform: translateY(50px);
+  }
+
+  &__links-link {
+    margin-bottom: 15px;
+  }
+
+  &__links-thumb {
+    text-decoration: underline;
+    color: $title;
+  }
+
+  &__popular {
+    padding-top: 80px;
+  }
+
+  &__popular-inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__price,
+  &__links-link {
+    display: block;
+  }
+}
+
+@import "media";
